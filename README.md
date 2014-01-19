@@ -2,7 +2,7 @@ Jobsworth Documentation (jwdoc)
 ===============================
 
 Welcome to the Jobsworth Project Management Documentation.
-The Jobsworth software development project will be found here:
+The associated Jobsworth software development project will be found here:
 
 [Project page]             http://github.com/ari/jobsworth
 
