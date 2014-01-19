@@ -27,8 +27,8 @@ Contribute
 
 I have set up the following infrastructure for DocBook authoring
 
-* SuSE linux
-* "daps" parser to simplify generation of documents
+* openSuSE Linux
+* [daps] http://daps.sourceforge.net/ toolchain to simplify generation of documents
 * eclipse workbench with xml editing capabilities
 
 License
