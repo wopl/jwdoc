@@ -13,7 +13,7 @@ Get the latest Docs
 we currently support two compiled versions of the documentation
 
 * a PDF-Version
-* an zipped version containing a HTML folder structure
+* a zipped version containing a HTML folder structure
  
 Both versions will be found in the "build" folder.
 
