@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<?xml-stylesheet href="urn:x-daps:xslt:profiling:docbook45-profile.xsl" 
+                 type="text/xml" title="Profiling step"?>
+-->
+<!DOCTYPE chapter PUBLIC
+ "-//OASIS//DTD DocBook XML V4.5//EN"
+ "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+ <chapter id="cha.examples">
+  <title>Examples: the most commonly used DocBook XML constructs</title>
+  
+  <para>
+   I am a paragraph in a chapter.
+  </para>
+  <note>
+   <para>
+    This is a note
+   </para>
+  </note>
+  <important>
+   <para>
+    This is important
+   </para>
+  </important>
+  <warning>
+   <para>
+    This is a warning
+   </para>
+  </warning>
+  <caution>
+   <para>
+    This is a caution
+   </para>
+  </caution>
+<screen> <userinput>ls -1</userinput>
+foo1
+foo2
+foo3
+ <userinput>ls -1 | grep foo2</userinput>
+foo2
+ <userinput>su</userinput>
+<prompt>Password: </prompt>
+ <userinput>cat foo2</userinput>
+This is the file called 'foo2'</screen>
+  <section id="sec.template.examples.lists">
+   <title>Lists</title>
+   <para>
+    This section 1 showcases 3 types of lists.
+   </para>
+   <section id="sec.template.examples.lists.itemized">
+    <title>Itemized Lists</title>
+
+    <para>I am a paragraph in a section 2.</para>
+    <itemizedlist>
+     <title>Example Itemized List</title>
+     <listitem>
+      <para>
+       Listitem 1
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       Listitem 2
+      </para>
+     </listitem>
+    </itemizedlist>
+   </section>
+   <section id="sec.template.examples.lists.ordered">
+    <title>Ordered Lists</title>
+    <orderedlist>
+     <title>Example Ordered List</title>
+     <listitem>
+      <para>
+       First item
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       Second item
+      </para>
+     </listitem>
+    </orderedlist>
+   </section>
+   <section id="sec.template.examples.lists.variable">
+    <title>Variablelists</title>  
+    <variablelist>
+     <title>Example Variablelist</title>
+     <varlistentry>
+      <term>Term 1</term>
+      <listitem>
+       <para>
+        Definition 1
+       </para>
+      </listitem>
+     </varlistentry>
+     <varlistentry>
+      <term>Term 2</term>
+      <listitem>
+       <para>
+        Definition 2
+       </para>
+      </listitem>
+     </varlistentry>
+    </variablelist>
+   </section>
+  </section>
+  <section id="sec.template.examples.table">
+   <title>Tables</title>
+   <para>This section 1 features a table with 4 columns and 3 rows:
+   </para>
+   <table>
+    <title>Example Table</title>
+    <tgroup cols="4">
+     <colspec colnum="1" colname="1" colwidth="25*"/>
+     <colspec colnum="2" colname="2" colwidth="25*"/>
+     <colspec colnum="3" colname="3" colwidth="25*"/>
+     <colspec colnum="4" colname="4" colwidth="25*"/>
+     <thead>
+      <row>
+       <entry><para>Col 1</para></entry>
+       <entry><para>Col 2</para></entry>
+       <entry><para>Col 3</para></entry>
+       <entry><para>Col 4</para></entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry><para>Row 1, Cell 1</para></entry>
+       <entry><para>Row 1, Cell 2</para></entry>
+       <entry><para>Row 1, Cell 3</para></entry>
+       <entry><para>Row 1, Cell 4</para></entry>
+      </row>
+      <row>
+       <entry><para>Row 2, Cell 1</para></entry>
+       <entry><para>Row 2, Cell 2</para></entry>
+       <entry><para>Row 2, Cell 3</para></entry>
+       <entry><para>Row 2, Cell 4</para></entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </table>
+  </section>
+  <section id="sec.template.examples.images">
+   <title>Images</title>
+   <para>
+    This section 1 shows two types of images:  with and without a
+    caption. 
+   </para>
+   <figure>
+    <title>Basketball Player</title>
+    <mediaobject>
+     <imageobject role="fo">
+      <imagedata fileref="example2.png" width="75%"/>
+     </imageobject>
+     <imageobject role="html">
+      <imagedata fileref="example2.png" width="75%"/>
+     </imageobject>
+    </mediaobject>
+   </figure>
+   <para>
+    And now an image without caption:
+   </para>
+   <informalfigure>
+    <mediaobject>
+     <imageobject role="fo">
+      <imagedata fileref="example1.png" width="75%"/>
+     </imageobject>
+     <imageobject role="html">
+      <imagedata fileref="example1.png" width="75%"/>
+     </imageobject>
+    </mediaobject>
+   </informalfigure>
+  </section>
+ </chapter>
+
+ 
+ 

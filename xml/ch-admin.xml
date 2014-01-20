@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<?xml-stylesheet href="urn:x-daps:xslt:profiling:docbook45-profile.xsl" 
+                 type="text/xml" title="Profiling step"?>
+-->
+<!DOCTYPE chapter PUBLIC
+ "-//OASIS//DTD DocBook XML V4.5//EN"
+ "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<chapter id="cha.admin">
+  <title>Administration</title>
+  <abstract>
+    <para>Administration-Guide</para>
+  </abstract>
+  <section id="login">
+   <title>Login</title>
+   <para>
+    After you have successfully managed the installation part, it's time
+    to login and start esploring Jobsworth 4.0.
+   </para>
+   <para>
+    Open the browser of your choice (currently supported are: Internet
+    Explorer, Firefox, Chrome) and type in the URL of your Jobsworth
+    server followed by port 8080. For example:
+   </para>
+   <screen>http://172.20.50.4:8080</screen>
+   <para>This will lead you to the following login screen.</para>
+   <figure>
+    <title>Login</title>
+    <mediaobject>
+     <imageobject role="fo">
+      <imagedata fileref="login.png" width="100%" />
+     </imageobject>
+     <imageobject role="html">
+      <imagedata fileref="login.png" width="100%" />
+     </imageobject>
+    </mediaobject>
+   </figure>
+   <important>
+    <para>The default user after installation is
+    <emphasis>admin/password</emphasis>
+    . For security reasons
+    change the password as soon as possible.</para>
+   </important>
+  </section>
+  
+  <!-- Description of Menu-Items is included from external file -->
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sec-menuitems.xml" />
+  
+  <section id="widgets">
+   <title>Widgets</title>
+   <para></para>
+  </section>
+  <section id="workflow">
+   <title>Workflow</title>
+   <para></para>
+  </section>
+ </chapter>

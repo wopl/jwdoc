@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<?xml-stylesheet href="urn:x-daps:xslt:profiling:docbook45-profile.xsl" 
+                 type="text/xml" title="Profiling step"?>
+-->
+<!DOCTYPE chapter PUBLIC
+ "-//OASIS//DTD DocBook XML V4.5//EN"
+ "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<chapter id="cha.install">
+  <title>Installation</title>
+  <abstract>
+   <para>The base installation of Jobsworth 4.0 is very easy
+        (big improvement to previous releases), once a server with
+        some SQL-database and a servlet container has been set up. For
+        those of you not setting up such servers frequently, I have
+        added some more screenshots and commands, that might help you
+        speeding up the installation process.</para>
+  </abstract>
+  <note>
+   <para>
+       The following installation instructions are based on FreeBSD&reg; 9.2.
+       Other Unix-like operating systems may also work, once a LAMP server has been set up.
+       Especially pathes to configuration files differ in various distributions
+       from FreeBSD&reg; and have to be adapted individually.
+     </para>
+  </note>
+    <para>
+    First of all get an operating system on a dedicated machine running. Typically Jobsworth
+    only uses server functionality, therefore a graphical user interface (e.g. Gnome or KDE) is
+    not necessary. If you are new to server installation, such GUI would help you to find your
+    way around (e.g. looking on the web for HowTo's). 
+    </para>
+  <section id="database">
+   <title>Database</title>
+     <para>
+     Install the database-server package. You can either use mysql or
+     postgresql. The following example shows the setup of
+     <emphasis>mysql</emphasis>
+     . After invoking mysql from the command-line you should see a screen like this:
+     </para>
+     <screen width="100%" role="smaller">$ <userinput>mysql</userinput>
+Welcome to the MySQL monitor. Commands end with ; or \g.
+Your MySQL connection id is 6
+Server version: 5.5.33 Source distribution
+
+Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rigths reserved.
+Oracle is a registered trademark of Oracle Corporation and/or its 
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type &apos;help;&apos; or '\h' for help. Type '\c' to clear current input statement.
+
+mysql></screen>
+     <important>
+      <para>
+       If you see any minus-signs in the screenshot above: This is some unresolved
+       rendering error problem (for PDFs only?). Be aware that those minus-signs
+       shall NOT be typed as part of the configuration scripts that will follow.
+      </para>
+     </important>
+     <para>Now type in the following commands to create the jobsworth database and 
+     an admin-user. Feel free to adjust database-name, user-id and password and
+     note it for later configuration. Then quit mysql-console.</para>
+     <screen><userinput>CREATE DATABASE mydb DEFAULT CHARACTER SET utf8</userinput>
+<userinput>CREATE USER &apos;monty&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;some_pass&apos;;</userinput>
+<userinput>GRANT ALL PRIVILEGES ON *.* TO 'monty'@'localhost' WITH GRANT OPTION</userinput>
+<userinput>quit</userinput></screen>
+     <note>
+      <para>
+       At a later stage in this installation process Jobsworth will setup all tables
+       and initial data on its first call.
+      </para> 
+     </note>
+     <para>
+      To enable the start of mysql during start of your server, the following entry has
+      to be inserted into your startup configuration file (e.g. /etc/rc.conf)
+     </para>
+     <screen><userinput>mysql_enable="YES"</userinput></screen>
+  </section>
+  <section id="apache">
+   <title>Apache</title>
+     <para>description t.b.d.</para>
+   <para>In any browser type in the URL of your Jobsworth server. For example: </para>
+   <screen>http://172.20.50.4</screen>
+     <para>A simple screen shows, that Apache is running.</para>
+     <figure>
+      <title>Apache works</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="apache.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="apache.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+  <section id="servletcontainer">
+   <title>Servlet container</title>
+   <para>t.b.d.</para>
+     <para>In any browser type in the URL of your Jobsworth server followed by port 8080. For example: </para>
+     <screen>http://172.20.50.4:8080</screen>
+     <para>If you see the following screen, your Tomcat installation has been successfull.</para>
+     <figure>
+      <title>Tomcat works</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="tomcat.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="tomcat.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure> 
+  </section>
+  <section id="email">
+   <title>E-Mail</title>
+   <para>t.b.d.</para>
+  </section>
+  <section id="jwinstall">
+   <title>Jobsworth</title>
+   <para>t.b.d.</para>
+  </section>
+ </chapter>

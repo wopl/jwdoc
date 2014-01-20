@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<?xml-stylesheet href="urn:x-daps:xslt:profiling:docbook45-profile.xsl" 
+                 type="text/xml" title="Profiling step"?>
+-->
+<!DOCTYPE section PUBLIC
+ "-//OASIS//DTD DocBook XML V4.5//EN"
+ "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+  <section id="menuitems">
+   <title>Menu Items</title>
+   <abstract>
+    <para>
+     Jobsworth needs some basic preparation (e.g. project and company
+     setup), before each function can be used. Nevertheless the Author decided to
+     describe the menu in the order it appears on the screen. A kind of
+     workflow may be added later.
+    </para>
+   </abstract>
+   <section id="overview">
+    <title>Overview</title>
+    <section id="dashboard">
+     <title>Dashboard</title>
+     <para>here we are</para>
+     <figure>
+      <title>Dashboard</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="dashboard.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="dashboard.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="planning">
+     <title>Planning</title>
+     <para>This screen will allow you to plan your tasks.</para>
+     <note>
+      <para>
+       This screen looks pretty empty after install and will make sense,
+       once some tasks have been generated.
+      </para>
+     </note>
+     <figure>
+      <title>Planning</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="planning.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="planning.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="billing">
+     <title>Billing</title>
+     <figure>
+      <title>Billing</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="billing.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="billing.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="history">
+     <title>History</title>
+     <para></para>
+     <figure>
+      <title>History</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="history.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="history.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+   </section>
+   <section id="create">
+    <title>Create</title>
+    <para></para>
+    <section id="cr.task">
+     <title>Create Task</title>
+     <figure>
+      <title>Create Task</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="cr_tasks.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="cr_tasks.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="cr.project">
+     <title>Create Project</title>
+     <figure>
+      <title>Create Project</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="cr_project.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="cr_project.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="cr.milestone">
+     <title>Create Milestone</title>
+     <figure>
+      <title>Create Milestone</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="cr_milestone.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="cr_milestone.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="cr.person">
+     <title>Create Person</title>
+     <figure>
+      <title>Create Person</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="cr_person.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="cr_person.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="cr.company">
+     <title>Create Company</title>
+     <figure>
+      <title>Create Company</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="cr_company.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="cr_company.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="cr.resource">
+     <title>Create Resource</title>
+     <figure>
+      <title>Create Resource</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="cr_resource.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="cr_resource.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+   </section>
+  </section>
+  
