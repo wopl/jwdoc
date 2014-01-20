@@ -71,7 +71,6 @@
     </section>
     <section id="history">
      <title>History</title>
-     <para></para>
      <figure>
       <title>History</title>
       <mediaobject>
@@ -87,7 +86,6 @@
    </section>
    <section id="create">
     <title>Create</title>
-    <para></para>
     <section id="cr.task">
      <title>Create Task</title>
      <figure>
@@ -168,6 +166,320 @@
        </imageobject>
        <imageobject role="html">
         <imagedata fileref="cr_resource.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+   </section>
+   <section id="tasks">
+     <title>Tasks</title>
+     <figure>
+      <title>Tasks</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="tasks.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="tasks.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+   <section id="milestones">
+     <title>Milestones</title>
+     <figure>
+      <title>Milestones</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="milestones.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="milestones.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+   <section id="wiki">
+     <title>Wiki</title>
+     <figure>
+      <title>Wiki</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="wiki.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="wiki.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+   <section id="projects">
+     <title>Projects</title>
+     <figure>
+      <title>Projects</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="projects.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="projects.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="myaccount">
+    <title>MyAccount</title>
+    <section id="my.general">
+     <title>General</title>
+     <figure>
+      <title>General</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="adm_general.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="adm_general.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="my.acc_ctrl">
+     <title>Access Control</title>
+     <figure>
+      <title>Access Control</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="adm_acc_ctrl.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="adm_acc_ctrl.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="my.email">
+     <title>E-Mail Adresses</title>
+     <figure>
+      <title>E-Mail Adresses</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="adm_email.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="adm_email.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="my.task_filters">
+     <title>Task Filters</title>
+     <figure>
+      <title>Task Filters</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="adm_task_filters.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="adm_task_filters.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="my.permissions">
+     <title>Projects Permissions</title>
+     <figure>
+      <title>Projects Permissions</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="adm_permissions.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="adm_permissions.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="my.workplan">
+     <title>Work Plan</title>
+     <figure>
+      <title>Work Plan</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="adm_workplan.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="adm_workplan.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+   </section>
+   <section id="companyadmin">
+    <title>Company Admin</title>
+    <section id="coa.general">
+     <title>General</title>
+     <figure>
+      <title>General</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_general.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_general.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="coa.scorerules">
+     <title>Score Rules</title>
+     <figure>
+      <title>Score Rules</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_scorerules.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_scorerules.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="coa.tasktemplates">
+     <title>Task Templates</title>
+     <figure>
+      <title>Task Templates</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_tasktemplates.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_tasktemplates.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+     <figure>
+      <title>New Task Template</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_newtasktemplate.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_newtasktemplate.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="coa.triggers">
+     <title>Triggers</title>
+     <figure>
+      <title>Triggers</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_triggers.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_triggers.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+     <figure>
+      <title>New Trigger</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_newtrigger.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_newtrigger.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="coa.services">
+     <title>Services</title>
+     <figure>
+      <title>Services</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_services.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_services.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+     <figure>
+      <title>New Service</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_newservice.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_newservice.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="coa.newsitems">
+     <title>News Items</title>
+     <figure>
+      <title>News Items</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_newsitems.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_newsitems.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+     <figure>
+      <title>Create News Item</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_createnewsitem.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_createnewsitem.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="coa.snippets">
+     <title>Snippets</title>
+     <figure>
+      <title>Snippets</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_snippets.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_snippets.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+     <figure>
+      <title>Create Snippet</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_createsnippet.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_createsnippet.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section> 
+    
+    <section id="coa.orphanedemails">
+     <title>Orphaned E-Mails</title>
+     <figure>
+      <title>Orphaned E-Mails</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_orphanedemail.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_orphanedemail.png" width="100%" />
        </imageobject>
       </mediaobject>
      </figure>
