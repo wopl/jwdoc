@@ -313,8 +313,7 @@
       </mediaobject>
      </figure>
     </section>
-   </section>
-   <section id="companyadmin">
+   </section><section id="companyadmin">
     <title>Company Admin</title>
     <section id="coa.general">
      <title>General</title>
@@ -469,7 +468,6 @@
       </mediaobject>
      </figure>
     </section> 
-    
     <section id="coa.orphanedemails">
      <title>Orphaned E-Mails</title>
      <figure>
@@ -480,6 +478,104 @@
        </imageobject>
        <imageobject role="html">
         <imagedata fileref="co_orphanedemail.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+   </section>
+   <section id="companyproperties">
+    <title>Company Properties</title>
+    <section id="cop.person">
+     <title>Person</title>
+     <figure>
+      <title>Person</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_userproperties.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_userproperties.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="cop.company">
+     <title>Company</title>
+     <figure>
+      <title>Company</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_company.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_company.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="cop.location">
+     <title>Company Location</title>
+     <figure>
+      <title>Company Location</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_companylocation.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_companylocation.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="cop.worklog">
+     <title>Work Log</title>
+     <figure>
+      <title>Worklog</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_worklog.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_worklog.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="cop.taskproperties">
+     <title>Task Properties</title>
+     <figure>
+      <title>Task Properties</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_taskproperties.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_taskproperties.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+    </section>
+    <section id="cop.resourcetype">
+     <title>Resource Type</title>
+     <figure>
+      <title>Resource Type</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_resourcetype.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_resourcetype.png" width="100%" />
+       </imageobject>
+      </mediaobject>
+     </figure>
+     <figure>
+      <title>Create Resource Type</title>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="co_resourcetypecreate.png" width="100%" />
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="co_resourcetypecreate.png" width="100%" />
        </imageobject>
       </mediaobject>
      </figure>

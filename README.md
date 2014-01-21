@@ -6,6 +6,17 @@ The associated Jobsworth software development project will be found here:
 
 [Project page]             http://github.com/ari/jobsworth
 
+I hope, this collection of information will grow the user community of Jobsworth.
+Please contribute with anything you think is useful here. Especially
+the many screenshots need some good descriptions first.
+
+And for those of you already working with Jobsworth for a while: Why not contribute
+a kind of typical workflow snippets?
+
+Have fun and I wish, this is somehow useful for some of you!
+
+Wolfram
+
 
 Get the latest Docs
 -------------------
@@ -23,7 +34,6 @@ Contribute
 * The source documentation is based on DocBook XML V4.5
 * some restrictions apply in terms of supported tags
 * some restrictions apply for folder setup
-* stylesheets for legal reasons will not be published here
 
 I have set up the following infrastructure for DocBook authoring
 
