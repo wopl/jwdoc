@@ -78,6 +78,9 @@ mysql></screen>
      </para>
      <screen><userinput>mysql_enable="YES"</userinput></screen>
   </section>
+  
+  
+  
   <section id="apache">
    <title>Apache</title>
      <para>description t.b.d.</para>
@@ -98,6 +101,13 @@ mysql></screen>
     </section>
   <section id="servletcontainer">
    <title>Servlet container</title>
+   <para>text of servlet container</para>
+
+   <!-- include context.example.xml file for servlet-container configuration -->
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+    href="../snippets/context.example.xml" />
+   
+   
    <para>t.b.d.</para>
      <para>In any browser type in the URL of your Jobsworth server followed by port 8080. For example: </para>
      <screen>http://172.20.50.4:8080</screen>

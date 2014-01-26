@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<?xml-stylesheet href="urn:x-daps:xslt:profiling:docbook45-profile.xsl" 
+                 type="text/xml" title="Profiling step"?>
+-->
+<!DOCTYPE para PUBLIC
+ "-//OASIS//DTD DocBook XML V4.5//EN"
+ "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<para>
+
+ <caution>
+  <para>
+   Please note that line-breaks in the following listing might be confusing.
+   Always load actual
+   <ulink url="https://github.com/ari/jobsworth/blob/master/config/context.example.xml">context.example.xml</ulink>
+   file for your reference!
+  </para>
+ </caution>
+
+<programlisting>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!--
+This file is an example. You will need to customise it for your own needs, and rename it
+to context.xml. In Apache Tomcat is belongs inside a folder called "config".
+
+You can change the mysql driver to postgresql and you will need to replace all the variables
+which look like this ${VARIABLE} either at runtime using a script, or by editing this file
+directly.
+--&gt;
+
+&lt;Context swallowOutput="true"&gt;
+  &lt;Resource name="jdbc/jobsworth"
+            removeAbandoned="true"
+            auth="Container" type="javax.sql.DataSource"
+            maxActive="100" maxIdle="30" maxWait="10000"
+            username="${DBUSER}" password="${DBPASS}" <co id="co1"/>
+            driverClassName="com.mysql.jdbc.Driver" batchSize="-1"
+            url="jdbc:mysql://${DBSERVER}:3306/${DBNAME}? <co id="co2"/> autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=utf8"
+            validationQuery="select 1"/&gt;
+
+  &lt;!-- The base domain of the running application. The actual URL you use to access the system is the name of the tenant followed by this. So you might have 'company1.acme.com' and 'company2.acme.com' --&gt;
+  &lt;Parameter name="config.domain" value="acme.com" override="false"/&gt;
+
+  &lt;!-- Jobsworth can be branded as something else --&gt;
+  &lt;Parameter name="config.productName" value="jobsworth" override="false"/&gt;
+
+  &lt;!-- SSL is good. But you may want to turn it off while you are first setting this up --&gt;
+  &lt;Parameter name="config.ssl" value="true" override="false"/&gt;
+
+   &lt;!-- A path to a folder on disk where jobsworth will store task attachments --&gt;
+  &lt;Parameter name="config.storeroot" value="/var/jobsworth/assets" override="false"/&gt;
+
+  &lt;!-- What domain will mail from jobsworth come from? --&gt;
+  &lt;Parameter name="config.email_domain" value="acme.com" override="false"/&gt;
+
+  &lt;!-- Some emails like password resets will come from this user name. So in this example, it will be jobsworth@acme.com --&gt;
+  &lt;Parameter name="config.email_replyto" value="jobsworth" override="false"/&gt;
+
+  &lt;!-- The from user name. This is usually the same as the reply-to username --&gt;
+  &lt;Parameter name="config.email_from" value="jobsworth" override="false"/&gt;
+
+  &lt;!-- Something to put at the start of every subject on emails from jobsworth --&gt;
+  &lt;Parameter name="config.email_prefix" value="'[jobsworth]'" override="false"/&gt;
+
+  &lt;!-- Jobsworth SMTP settings --&gt;
+  &lt;Parameter name="config.smtp_host" value="mail.acme.com" override="false"/&gt;
+  &lt;Parameter name="config.smtp_port" value="25" override="false"/&gt;
+  &lt;Parameter name="config.smtp_domain" value="acme.com" override="false"/&gt;
+
+  &lt;!-- This value is used for integration with your incoming mail server. Change it! --&gt;
+  &lt;Parameter name="config.secret" value="changeThisValueToSomethingRandom" override="false"/&gt;
+
+  &lt;!-- Jobsworth email notification of errors --&gt;
+  &lt;Parameter name="config.error_email_prefix" value="'[jobsworth error]'" override="false"/&gt;
+  &lt;Parameter name="config.error_sender_address" value="jobsworth@acme.com" override="false"/&gt;
+  &lt;Parameter name="config.error_exception_recipients" value="['support@example.com','sysadmin@example.com']" override="false"/&gt;
+
+&lt;/Context&gt;</programlisting>
+
+ <calloutlist>
+  <callout arearefs="co1">
+   <para>Do not use variables ($ and {} chars) but enter
+   UID and Password enclosed in parenthesis (except you have external scripts defining those variables), e.g.:
+   <code>username: "uid" password: "pw"</code>
+   </para> 
+  </callout>
+  
+  <callout arearefs="co2">
+   <para>e.g.:
+   <code>url="jdbc:mysql://172.20.50.4:3306/mydb?</code>
+   </para> 
+  </callout>
+
+ </calloutlist>
+
+
+</para>

@@ -6,7 +6,8 @@ The associated Jobsworth software development project will be found here:
 
 [Project page]             http://github.com/ari/jobsworth
 
-I hope, this collection of information will grow the user community of Jobsworth.
+I hope, this collection of information will grow the user community of
+Jobsworth Project Management software.
 Please contribute with anything you think is useful here. Especially
 the many screenshots need some good descriptions first.
 
