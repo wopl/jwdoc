@@ -91,11 +91,21 @@ mysql></screen>
      <screen><userinput>mysql_enable="YES"</userinput></screen>
   </chapter>
   
-  
-  
   <chapter id="apache">
    <title>Apache</title>
-     <para>description t.b.d.</para>
+     <para>Installation of Apache Web-Server on most OS distributions is pretty
+     straightforward. Just install the packages delivered with your distribution.
+     For this example I have installed Apache V2.2.</para>
+     
+     <para>
+      To enable the start of Apache Web-Server during start of your server,
+      the following entry (depending on your OS and apache version) has to be
+      inserted into your startup configuration
+      file (e.g. /etc/rc.conf)
+     </para>
+     <screen><userinput>apache22_enable="YES"</userinput></screen>
+     
+     
    <para>In any browser type in the URL of your Jobsworth server. For example: </para>
    <screen>http://172.20.50.4</screen>
      <para>A simple screen shows, that Apache is running.</para>
@@ -111,16 +121,39 @@ mysql></screen>
       </mediaobject>
      </figure>
     </chapter>
+    
   <chapter id="servletcontainer">
    <title>Servlet container</title>
-   <para>text of servlet container</para>
+   <para>
+    Install Apache Tomcat (or another java servlet container) and make sure you can get
+    to the default installation home page. How to install Tomcat or some other servlet
+    container is beyond the scope of these instructions (still, some more details will follow here)
+    but the basic details can be found in the
+    <ulink url="http://tomcat.apache.org/tomcat-7.0-doc/">documentation</ulink>
+    . Don't be afraid of all those XML configuration
+    files in Tomcat; mostly they can be left to default values.
+   </para>
+   <para>
+    There is one file you will need to edit and that is context.xml.
+    This file defines all the configuration for your application.
+    Copy the
+    <ulink url="https://github.com/ari/jobsworth/blob/master/config/context.example.xml">example</ulink>
+    into the tomcat configuration folder and set all
+    the variables to reasonable choices for your system.
+   </para>
 
    <!-- include context.example.xml file for servlet-container configuration -->
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
     href="../snippets/context.example.xml" />
    
    
-   <para>t.b.d.</para>
+     <para>
+      To enable the start of Tomcat Servlet container during start of your server,
+      the following entry has to be inserted into your startup configuration
+      file (e.g. /etc/rc.conf)
+     </para>
+     <screen><userinput>tomcat7_enable="YES"</userinput></screen>
+
      <para>In any browser type in the URL of your Jobsworth server followed by port 8080. For example: </para>
      <screen>http://172.20.50.4:8080</screen>
      <para>If you see the following screen, your Tomcat installation has been successfull.</para>
@@ -138,11 +171,76 @@ mysql></screen>
   </chapter>
   <chapter id="email">
    <title>E-Mail</title>
-   <para>t.b.d.</para>
+   <para>
+    When jobsworth sends outgoing emails for task updates, they will have
+    a reply address which looks like this:
+   </para> 
+   <screen>task-1234@acme.domain.com.au</screen>
+   <para>
+    If a user hits reply to that email, you want it to be appended to the
+    task comments. Here's how to set this up for sendmail;
+    adapt the script for your own mail server. Mail can be running on a different
+    server to jobsworth because we use HTTP to push the mail from your mail
+    server to jobsworth.
+   </para>
+   <para>
+    Sendmail:
+    Add an entry to /etc/mail/local-host-names for your hostname:
+   </para>
+   <screen>acme.domain.com.au</screen>
+   <para>
+    Add an entry to /etc/mail/aliases to create an alias that will hand off emails
+    to a script:
+   </para>
+   <screen>jobsworth: "|/usr/local/share/jobsworth/mail_script.sh"</screen>
+   <para>
+    Add an entry to /etc/mail/virtusertable to redirect all emails to your domain
+    to the above alias
+   </para>
+   <screen>@acme.domain.com.au        jobsworth</screen>
+   <para>
+    run
+   </para>
+   <screen>make; make restart</screen>
+   <para>
+    in /etc/mail to rebuild the sendmail databases.
+    Now create a script at /usr/local/share/jobsworth/mail_script.sh with the following contents
+   </para>
+   <screen>
+#!/bin/sh
+SECRET=password1234
+URL=https://acme.domain.com.au/emails
+cat $2 | /usr/local/bin/curl -s -k --data-urlencode secret=${SECRET} --data-urlencode email@- ${URL}
+   </screen>
+   <para>
+Make sure you change the password and you make it the same as the password in the context.xml file.
+   </para>
   </chapter>
+  
   <chapter id="jwinstall">
    <title>Jobsworth</title>
-   <para>t.b.d.</para>
+   <para>
+    Stop tomcat. With FreeBSD use the following command:
+   </para>
+
+   <screen><userinput>service tomcat7 stop</userinput></screen>
+   <para>
+   Enter Tomcat web-directory e.g.</para>
+   <screen>/usr/local/apache-tomcat-7.0/webapps</screen>
+
+   <para> and delete (or better rename) the subdirectory ROOT. Now copy the latest version of
+    Jobsworth installation file
+    <ulink url="https://github.com/ari/jobsworth/releases">ROOT.war</ulink>
+    into the Tomcat web-directory. Finally enable Tomcat again with
+   </para>
+   <screen><userinput>service tomcat7 start</userinput></screen>
+   <para>
+   The ROOT.war-file will now be extracted into a ROOT subdirectory.
+   Give it a few seconds to complete before you continue.
+   </para>
+   <tip><para>For the installation of any new version
+   of Jobsworth you only have to replace the ROOT.war file.</para></tip>
+
   </chapter>
 <!-- 
  </chapter>

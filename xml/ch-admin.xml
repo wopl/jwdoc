@@ -19,9 +19,10 @@
 -->
   <chapter id="login">
    <title>Login</title>
+   <para></para>
    <para>
     After you have successfully managed the installation part, it's time
-    to login and start esploring Jobsworth 4.0.
+    to login and start exploring Jobsworth 4.0.
    </para>
    <para>
     Open the browser of your choice (currently supported are: Internet
@@ -44,7 +45,9 @@
    <important>
     <para>The default user after installation is
     <emphasis>admin/password</emphasis>
-    . For security reasons
+    . During first login all database tables will be generated
+    and filled with some initial content. This may take a while. Please
+    stay patient. For security reasons
     change the password as soon as possible.</para>
    </important>
   </chapter>
