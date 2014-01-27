@@ -112,7 +112,6 @@
 <!-- include all chapters -->
 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ch-install.xml" />
 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ch-admin.xml" />
-
 <!-- this is not needed and for reference only
 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ch-examples.xml" />
 -->

@@ -9,19 +9,19 @@
 
 <para>
 
- <caution>
+ <important>
   <para>
    Please note that line-breaks in the following listing might be confusing.
    Always load actual
    <ulink url="https://github.com/ari/jobsworth/blob/master/config/context.example.xml">context.example.xml</ulink>
    file for your reference!
   </para>
- </caution>
+ </important>
 
 <programlisting>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!--
 This file is an example. You will need to customise it for your own needs, and rename it
-to context.xml. In Apache Tomcat is belongs inside a folder called "config".
+to context.xml. In Apache Tomcat is belongs inside a folder called "config". <co id="co1"/>
 
 You can change the mysql driver to postgresql and you will need to replace all the variables
 which look like this ${VARIABLE} either at runtime using a script, or by editing this file
@@ -33,9 +33,9 @@ directly.
             removeAbandoned="true"
             auth="Container" type="javax.sql.DataSource"
             maxActive="100" maxIdle="30" maxWait="10000"
-            username="${DBUSER}" password="${DBPASS}" <co id="co1"/>
+            username="${DBUSER}" password="${DBPASS}" <co id="co2"/>
             driverClassName="com.mysql.jdbc.Driver" batchSize="-1"
-            url="jdbc:mysql://${DBSERVER}:3306/${DBNAME}? <co id="co2"/> autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=utf8"
+            url="jdbc:mysql://${DBSERVER}:3306/${DBNAME}? <co id="co3"/> autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=utf8"
             validationQuery="select 1"/&gt;
 
   &lt;!-- The base domain of the running application. The actual URL you use to access the system is the name of the tenant followed by this. So you might have 'company1.acme.com' and 'company2.acme.com' --&gt;
@@ -62,7 +62,7 @@ directly.
   &lt;!-- Something to put at the start of every subject on emails from jobsworth --&gt;
   &lt;Parameter name="config.email_prefix" value="'[jobsworth]'" override="false"/&gt;
 
-  &lt;!-- Jobsworth SMTP settings --&gt;
+  &lt;!-- Jobsworth SMTP settings --&gt; <co id="co4"/>
   &lt;Parameter name="config.smtp_host" value="mail.acme.com" override="false"/&gt;
   &lt;Parameter name="config.smtp_port" value="25" override="false"/&gt;
   &lt;Parameter name="config.smtp_domain" value="acme.com" override="false"/&gt;
@@ -79,19 +79,37 @@ directly.
 
  <calloutlist>
   <callout arearefs="co1">
+   <para>If you are unsure, which "config" folder: search for a folder containing a
+    subfolder "ROOT". It most probably is close to this. On my FreeBSD installation
+    the config folder is located at:
+    <screen>/usr/local/apache-tomcat-7.0/conf</screen>
+   </para> 
+  </callout>
+ 
+  <callout arearefs="co2">
    <para>Do not use variables ($ and {} chars) but enter
    UID and Password enclosed in parenthesis (except you have external scripts defining those variables), e.g.:
-   <code>username: "uid" password: "pw"</code>
+   <screen>username: "uid" password: "pw"</screen>
    </para> 
   </callout>
   
-  <callout arearefs="co2">
-   <para>e.g.:
-   <code>url="jdbc:mysql://172.20.50.4:3306/mydb?</code>
+  <callout arearefs="co3">
+   <para>Example:
+   <screen>url="jdbc:mysql://172.20.50.4:3306/mydb?</screen>
    </para> 
   </callout>
 
  </calloutlist>
+
+Remarks above are mandatory for getting Jobsworth running. All remarks below will add
+e-mail capabilities and may be configured later.
+
+<calloutlist>
+  <callout arearefs="co4">
+   <para>Please fill in host, port and domain as given from your e-mail provider.
+   </para> 
+  </callout>
+</calloutlist> 
 
 
 </para>

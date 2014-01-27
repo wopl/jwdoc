@@ -3,20 +3,29 @@
 <?xml-stylesheet href="urn:x-daps:xslt:profiling:docbook45-profile.xsl" 
                  type="text/xml" title="Profiling step"?>
 -->
-<!DOCTYPE chapter PUBLIC
+<!DOCTYPE part PUBLIC
  "-//OASIS//DTD DocBook XML V4.5//EN"
  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
 
-<chapter id="cha.install">
+<part id="part.install">
+ <title>Installation</title>
+ 
+ <toc>  </toc>
+
+<!-- 
+ <chapter id="cha.install">
   <title>Installation</title>
-  <abstract>
+-->
+  <chapter id="base_install">
+   <title>base OS installation</title>
+   <para></para>
    <para>The base installation of Jobsworth 4.0 is very easy
         (big improvement to previous releases), once a server with
         some SQL-database and a servlet container has been set up. For
         those of you not setting up such servers frequently, I have
         added some more screenshots and commands, that might help you
         speeding up the installation process.</para>
-  </abstract>
+
   <note>
    <para>
        The following installation instructions are based on FreeBSD&reg; 9.2.
@@ -31,8 +40,11 @@
     not necessary. If you are new to server installation, such GUI would help you to find your
     way around (e.g. looking on the web for HowTo's). 
     </para>
-  <section id="database">
+
+  </chapter>
+  <chapter id="database">
    <title>Database</title>
+   <para></para>
      <para>
      Install the database-server package. You can either use mysql or
      postgresql. The following example shows the setup of
@@ -77,11 +89,11 @@ mysql></screen>
       to be inserted into your startup configuration file (e.g. /etc/rc.conf)
      </para>
      <screen><userinput>mysql_enable="YES"</userinput></screen>
-  </section>
+  </chapter>
   
   
   
-  <section id="apache">
+  <chapter id="apache">
    <title>Apache</title>
      <para>description t.b.d.</para>
    <para>In any browser type in the URL of your Jobsworth server. For example: </para>
@@ -98,8 +110,8 @@ mysql></screen>
        </imageobject>
       </mediaobject>
      </figure>
-    </section>
-  <section id="servletcontainer">
+    </chapter>
+  <chapter id="servletcontainer">
    <title>Servlet container</title>
    <para>text of servlet container</para>
 
@@ -123,13 +135,16 @@ mysql></screen>
        </imageobject>
       </mediaobject>
      </figure> 
-  </section>
-  <section id="email">
+  </chapter>
+  <chapter id="email">
    <title>E-Mail</title>
    <para>t.b.d.</para>
-  </section>
-  <section id="jwinstall">
+  </chapter>
+  <chapter id="jwinstall">
    <title>Jobsworth</title>
    <para>t.b.d.</para>
-  </section>
+  </chapter>
+<!-- 
  </chapter>
+--> 
+</part>

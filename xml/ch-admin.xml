@@ -3,16 +3,21 @@
 <?xml-stylesheet href="urn:x-daps:xslt:profiling:docbook45-profile.xsl" 
                  type="text/xml" title="Profiling step"?>
 -->
-<!DOCTYPE chapter PUBLIC
+<!DOCTYPE part PUBLIC
  "-//OASIS//DTD DocBook XML V4.5//EN"
  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
 
-<chapter id="cha.admin">
+<part id="part.admin">
+ <title>Administration</title>
+ 
+<!--  
+ <chapter id="cha.admin">
   <title>Administration</title>
   <abstract>
     <para>Administration-Guide</para>
   </abstract>
-  <section id="login">
+-->
+  <chapter id="login">
    <title>Login</title>
    <para>
     After you have successfully managed the installation part, it's time
@@ -42,17 +47,20 @@
     . For security reasons
     change the password as soon as possible.</para>
    </important>
-  </section>
+  </chapter>
   
   <!-- Description of Menu-Items is included from external file -->
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sec-menuitems.xml" />
   
-  <section id="widgets">
+  <chapter id="widgets">
    <title>Widgets</title>
    <para></para>
-  </section>
-  <section id="workflow">
+  </chapter>
+  <chapter id="workflow">
    <title>Workflow</title>
    <para></para>
-  </section>
+  </chapter>
+<!--   
  </chapter>
+ -->
+</part>
