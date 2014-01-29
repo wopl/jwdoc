@@ -58,6 +58,26 @@
   <chapter id="widgets">
    <title>Widgets</title>
    <para></para>
+   <section id="filters">
+    <title>Filters</title>
+    <para></para>
+   </section>
+   <section id="newesttasks">
+    <title>Newest Tasks</title>
+    <para></para>
+   </section>
+   <section id="nexttasks">
+    <title>Next Tasks</title>
+    <para></para>
+   </section>
+   <section id="tags">
+    <title>Tags</title>
+    <para></para>
+   </section>
+   <section id="toptasksmine">
+    <title>Top Tasks - Mine</title>
+    <para></para>
+   </section>
   </chapter>
   <chapter id="workflow">
    <title>Workflow</title>

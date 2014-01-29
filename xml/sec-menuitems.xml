@@ -99,6 +99,13 @@
        </imageobject>
       </mediaobject>
      </figure>
+     <tip>
+      <para>
+       Task dependencies are described here:
+       <ulink url="https://github.com/ari/jobsworth/wiki/Dependencies">Task dependencies</ulink>
+       . Needs some work to get included here.
+      </para>
+     </tip>
     </section>
     <section id="cr.project">
      <title>Create Project</title>
@@ -155,7 +162,92 @@
        </imageobject>
       </mediaobject>
      </figure>
+     <important>
+      <para>You might get confused by terms <emphasis>company</emphasis> and
+       <emphasis>customer</emphasis> that are not used
+       consistently. The admin is assigned to one company (e.g. default_company)
+       and creates multiple instances of customers he is working for or people are
+       employed by. Be aware that people always can see all customers (important for
+       running multiple projects on one jobsworth server).</para>
+     </important>
+
+     <table frame='all'><title>Create Company Input Fields</title>
+      <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+       <thead>
+        <row>
+         <entry>Field</entry>
+         <entry>Purpose</entry>
+        </row>
+       </thead>
+       <tbody>
+        <row>
+         <entry>Name</entry>
+         <entry>Enter a new customer name. People, Projects and Tasks are assigned to customers.</entry>
+        </row>
+        <row>
+         <entry>Contact Name</entry>
+         <entry>Enter the user's name of a previously defined person or leave the field empty for now.</entry>
+        </row>
+        <row>
+         <entry>Active</entry>
+         <entry>Select this customer to be active or inactive.</entry>
+        </row>
+       </tbody>
+      </tgroup>
+     </table>
+     
+     <para>Once you have created the new customer, type in the name in the search
+     button on the top. A new (extended) customer view will open which in addition
+     contains multiple tabs.</para>
+
+     <table frame='all'><title>Edit Company Tabs</title>
+      <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+       <thead>
+        <row>
+         <entry>Tab</entry>
+         <entry>Purpose</entry>
+        </row>
+       </thead>
+       <tbody>
+        <row>
+         <entry>Active Users</entry>
+         <entry>Shows all active users belonging to the customer.</entry>
+        </row>
+        <row>
+         <entry>Inactive Users</entry>
+         <entry>Shows all inactive users belonging to the customer.</entry>
+        </row>
+        <row>
+         <entry>Current Projects</entry>
+         <entry>Shows assigned projects and associated milestones. From here you
+         can enter those by just clicking the names.</entry>
+        </row>
+        <row>
+         <entry>Completed Projects</entry>
+         <entry>Shows completed projects.</entry>
+        </row>
+        <row>
+         <entry>Score Rules</entry>
+         <entry>Lets you create, edit and delete companies (customer's) score rules.</entry>
+        </row>
+        <row>
+         <entry>Sites</entry>
+         <entry>Shows all business units or locations of the customer.</entry>
+        </row>
+        <row>
+         <entry>Resources</entry>
+         <entry>Shows all defined resources of this customer. Click on an item to
+         enter the detail page</entry>
+        </row>
+        <row>
+         <entry>Services</entry>
+         <entry>??? unclear to me</entry>
+        </row>
+       </tbody>
+      </tgroup>
+     </table>
     </section>
+
     <section id="cr.resource">
      <title>Create Resource</title>
      <figure>
@@ -169,6 +261,38 @@
        </imageobject>
       </mediaobject>
      </figure>
+     <para>Resource is a generic term for anything that you want to be relevant
+      in planning a project. I could be for example:</para>
+    <itemizedlist>
+     <listitem>
+      <para>Websites</para>
+     </listitem>
+     <listitem>
+      <para>Computers</para>
+     </listitem>
+     <listitem>
+      <para>Rooms</para>
+     </listitem>
+     <listitem>
+      <para>Whiteboards</para>
+     </listitem>
+     <listitem>
+      <para>Projectors</para>
+     </listitem>
+     <listitem>
+      <para>... and more</para>
+     </listitem>
+    </itemizedlist>
+    <para>Be sure to define appropriate resource-types prior to defining the
+     individual resources.</para>
+    <tip>
+      <para>
+       More information on resource-management can be found here:
+       <ulink url="https://github.com/ari/jobsworth/wiki/Resource-management">Resource Management</ulink>
+       . Needs some work to get included here.
+      </para>
+     </tip>
+     
     </section>
    </section>
    <section id="tasks">
@@ -227,6 +351,34 @@
       </mediaobject>
      </figure>
     </section>
+   <section id="search">
+    <title>Search</title>
+    <para>The search field allows you to find items in different categories. Type
+    in at least three consecutive characters (the underline character will act
+    as a wildcard-char) and depending on the context you will
+    be prompted with a result list containing items of following catgories:</para>
+    <itemizedlist>
+     <listitem>
+      <para>Company / Customers</para>
+     </listitem>
+     <listitem>
+      <para>Milestones</para>
+     </listitem>
+     <listitem>
+      <para>People</para>
+     </listitem>
+     <listitem>
+      <para>Projects</para>
+     </listitem>
+     <listitem>
+      <para>Resources</para>
+     </listitem>
+     <listitem>
+      <para>Tasks</para>
+     </listitem>
+    </itemizedlist>
+    <para>After selection you will be led to the items detail page.</para>
+   </section>
     <section id="myaccount">
     <title>MyAccount</title>
     <section id="my.general">
