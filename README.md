@@ -24,8 +24,8 @@ Get the latest Docs
 
 we currently support two compiled versions of the documentation
 
-* a PDF-Version [pdf] http://github.com/wopl/jwdoc/build/jobsworth_en.pdf
-* a zipped version containing a HTML folder structure [HTML] http://github.com/wopl/jwdoc/build/jobsworth_en-html.tar.bz2
+* a PDF-Version [pdf] http://github.com/wopl/jwdoc/tree/master/build/jobsworth_en.pdf
+* a zipped version containing a HTML folder structure [HTML] http://github.com/wopl/jwdoc/tree/master/build/jobsworth_en-html.tar.bz2
  
 Both versions will be found in the "build" folder.
 
