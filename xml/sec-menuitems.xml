@@ -21,7 +21,20 @@
     <title>Overview</title>
     <section id="dashboard">
      <title>Dashboard</title>
-     <para>here we are</para>
+     <para>The Dashboard is a pretty powerful information overview that can be
+      customized both for administrator and individually per user. Lots of options allow
+      to individually select the information for your individual needs.
+      The Dashboard is preconfigured with most important widgets.
+      Enter the <emphasis>Create</emphasis> menu to add more widgets.
+     </para>
+     <para>
+      All widgets will get described later in this document 
+     </para>
+     <important><para>Currently there are some issues maintaining widgets.
+      This should be eliminated in one of the later releases. Until then
+      Widgets cannot be deleted. Using firefox
+      (compared to Internet Explorer) Widgets cannot get configured.
+      Some more problems currently occur.</para></important>
      <figure>
       <title>Dashboard</title>
       <mediaobject>
@@ -84,8 +97,31 @@
      </figure>
     </section>
    </section>
+
+
+
+<!-- ###################################################################### -->
+<!-- # Create                                                             # -->
+<!-- ###################################################################### -->
    <section id="create">
     <title>Create</title>
+    <para></para>
+    <para>Many screens within this section contain additional widgets on the right.
+     Please refer to the linked sections for more information about widgets used
+     in various screens:</para>
+     <itemizedlist>
+      <listitem>
+       <para><xref linkend="widgets.filters"/></para>
+      </listitem><listitem>
+       <para><xref linkend="widgets.tags"/></para>
+      </listitem><listitem>
+       <para><xref linkend="widgets.nexttasks"/></para>
+      </listitem>
+     </itemizedlist>
+   
+<!-- ###################################################################### -->
+<!-- # Create Task                                                        # -->
+<!-- ###################################################################### -->
     <section id="cr.task">
      <title>Create Task</title>
      <figure>
@@ -149,6 +185,10 @@
       </mediaobject>
      </figure>
     </section>
+
+<!-- ###################################################################### -->
+<!-- # Create Company                                                     # -->
+<!-- ###################################################################### -->
     <section id="cr.company">
      <title>Create Company</title>
      <figure>
@@ -195,6 +235,7 @@
        </tbody>
       </tgroup>
      </table>
+     
      
      <para>Once you have created the new customer, type in the name in the search
      button on the top. A new (extended) customer view will open which in addition
@@ -248,6 +289,9 @@
      </table>
     </section>
 
+<!-- ###################################################################### -->
+<!-- # Create Resource                                                    # -->
+<!-- ###################################################################### -->
     <section id="cr.resource">
      <title>Create Resource</title>
      <figure>
@@ -292,8 +336,18 @@
        . Needs some work to get included here.
       </para>
      </tip>
-     
     </section>
+    <section id="cr.widget">
+     <title>Add New Widget</title>
+     <para>This menu option only will show up, when the Dashboard is displayed.
+      You will be guided to add a new widget for the Dashboard. After specifying
+      a name and the type of the widget additional information is requested.
+      The different types of widgets are described here: 
+      <xref linkend="widgets"/>
+     </para>
+    
+    </section>
+    
    </section>
    <section id="tasks">
      <title>Tasks</title>

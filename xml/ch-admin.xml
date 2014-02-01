@@ -5,18 +5,19 @@
 -->
 <!DOCTYPE part PUBLIC
  "-//OASIS//DTD DocBook XML V4.5//EN"
- "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+ "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" 
+[
+<!ENTITY % xinclude SYSTEM "http://www.docbook.org/xml/4.5/xinclude.mod" >
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+]>
 
 <part id="part.admin">
  <title>Administration</title>
  
-<!--  
- <chapter id="cha.admin">
-  <title>Administration</title>
-  <abstract>
-    <para>Administration-Guide</para>
-  </abstract>
--->
+<!-- ###################################################################### -->
+<!-- # Login                                                              # -->
+<!-- ###################################################################### -->
   <chapter id="login">
    <title>Login</title>
    <para></para>
@@ -52,38 +53,61 @@
    </important>
   </chapter>
   
+<!-- ###################################################################### -->
+<!-- # Menu Items                                                         # -->
+<!-- ###################################################################### -->
   <!-- Description of Menu-Items is included from external file -->
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sec-menuitems.xml" />
   
+<!-- ###################################################################### -->
+<!-- # Widgets                                                            # -->
+<!-- ###################################################################### -->
   <chapter id="widgets">
    <title>Widgets</title>
    <para></para>
-   <section id="filters">
+   <section id="widgets.filters">
     <title>Filters</title>
-    <para></para>
+    <figure>
+     <title>Filter Widget</title>
+     <mediaobject>
+      <imageobject role="fo">
+       <imagedata fileref="widgetfilter.png" width="100%" />
+      </imageobject>
+     </mediaobject>
+    </figure>
+    <para>You will find the filter widget on many screens. It allows you to
+    filter displayed content and therefore only show relevant information.
+    Just select one of the predefined filters and it will appear within the
+    task search widget (for more information see
+    <xref linkend="widgets.tasksearch"/> ).</para>
    </section>
-   <section id="newesttasks">
-    <title>Newest Tasks</title>
+   <section id="widgets.tasks">
+    <title>Tasks</title>
     <para></para>
+    <section id="widgets.newesttasks">
+     <title>Newest Tasks</title>
+     <para></para>
+    </section>
+    <section id="widgets.nexttasks">
+     <title>Next Tasks</title>
+     <para></para>
+    </section>
+    <section id="widgets.toptasks">
+     <title>Top Tasks</title>
+     <para></para>
+    </section>
+    <section id="widgets.tasksearch">
+     <title>Task Search</title>
+     <para></para>
+    </section>
    </section>
-   <section id="nexttasks">
-    <title>Next Tasks</title>
-    <para></para>
-   </section>
-   <section id="tags">
+   <section id="widgets.tags">
     <title>Tags</title>
     <para></para>
    </section>
-   <section id="toptasksmine">
-    <title>Top Tasks - Mine</title>
-    <para></para>
-   </section>
   </chapter>
-  <chapter id="workflow">
+  <chapter id="widgets.workflow">
    <title>Workflow</title>
    <para></para>
   </chapter>
-<!--   
- </chapter>
- -->
 </part>

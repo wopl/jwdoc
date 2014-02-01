@@ -5,7 +5,12 @@
 -->
 <!DOCTYPE part PUBLIC
  "-//OASIS//DTD DocBook XML V4.5//EN"
- "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+ "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" 
+[
+<!ENTITY % xinclude SYSTEM "http://www.docbook.org/xml/4.5/xinclude.mod" >
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+]>
 
 <part id="part.install">
  <title>Installation</title>
@@ -16,6 +21,9 @@
  <chapter id="cha.install">
   <title>Installation</title>
 -->
+<!-- ###################################################################### -->
+<!-- # Base Install                                                       # -->
+<!-- ###################################################################### -->
   <chapter id="base_install">
    <title>base OS installation</title>
    <para></para>
@@ -42,6 +50,9 @@
     </para>
 
   </chapter>
+<!-- ###################################################################### -->
+<!-- # Database Install                                                   # -->
+<!-- ###################################################################### -->
   <chapter id="database">
    <title>Database</title>
    <para></para>
@@ -91,8 +102,12 @@ mysql></screen>
      <screen><userinput>mysql_enable="YES"</userinput></screen>
   </chapter>
   
+<!-- ###################################################################### -->
+<!-- # Apache Install                                                     # -->
+<!-- ###################################################################### -->
   <chapter id="apache">
    <title>Apache</title>
+   <para></para>
      <para>Installation of Apache Web-Server on most OS distributions is pretty
      straightforward. Just install the packages delivered with your distribution.
      For this example I have installed Apache V2.2.</para>
@@ -122,8 +137,12 @@ mysql></screen>
      </figure>
     </chapter>
     
+<!-- ###################################################################### -->
+<!-- # Tomcat Install                                                     # -->
+<!-- ###################################################################### -->
   <chapter id="servletcontainer">
    <title>Servlet container</title>
+   <para></para>
    <para>
     Install Apache Tomcat (or another java servlet container) and make sure you can get
     to the default installation home page. How to install Tomcat or some other servlet
@@ -169,8 +188,12 @@ mysql></screen>
       </mediaobject>
      </figure> 
   </chapter>
+<!-- ###################################################################### -->
+<!-- # E-Mail Install                                                     # -->
+<!-- ###################################################################### -->
   <chapter id="email">
    <title>E-Mail</title>
+   <para></para>
    <para>
     When jobsworth sends outgoing emails for task updates, they will have
     a reply address which looks like this:
@@ -217,8 +240,12 @@ Make sure you change the password and you make it the same as the password in th
    </para>
   </chapter>
   
+<!-- ###################################################################### -->
+<!-- # Jobsworth Install                                                  # -->
+<!-- ###################################################################### -->
   <chapter id="jwinstall">
    <title>Jobsworth</title>
+   <para></para>
    <para>
     Stop tomcat. With FreeBSD use the following command:
    </para>
