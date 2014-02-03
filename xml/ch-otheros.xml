@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<?xml-stylesheet href="urn:x-daps:xslt:profiling:docbook45-profile.xsl" 
+                 type="text/xml" title="Profiling step"?>
+-->
+<!DOCTYPE chapter PUBLIC
+ "-//OASIS//DTD DocBook XML V4.5//EN"
+ "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+ <chapter id="otheros">
+  <title>Other Operating Systems / Distributions</title>
+  <para></para>
+
+  <para>This chapter covers Jobsworth 4.0 installation for other
+   operation systems / distributions. It only will handle differences
+   to the descriptions above.</para>
+
+<!-- ###################################################################### -->
+<!-- # openSuSE 13.1                                                      # -->
+<!-- ###################################################################### -->
+  <section id="suse131">
+    <title>openSuSE 13.1</title>
+     <important><para>openSuSE 13.1 installation could not be finished due to
+     some errors. Stay tuned for an update, once we got this running.</para></important>
+     <section>
+      <title>Base Installation</title>
+      <para></para>
+     </section><section>
+      <title>Database Installation</title>
+      <para>
+       <itemizedlist>
+        <listitem>
+<!-- 
+         <para>Install <emphasis>mysql-community-server</emphasis> package. You
+         will run into a conflict. Select the choice to uninstall mariadb.</para>
+-->
+         <para><emphasis>MariaDB</emphasis> server is installed by default as a replacement
+         of mysql. MariaDB is
+         a fork of mysql and should work for Jobsworth as well.</para>
+        </listitem>
+        <listitem>
+<!-- 
+         <para>Install <emphasis>mysql-community-server</emphasis> package. You
+         will run into a conflict. Select the choice to uninstall mariadb.</para>
+-->
+         <para>Enable MariaDB server: yast2, Services Manager. Enable and start
+          the <emphasis>mysql</emphasis> entry.</para>
+        </listitem>
+       </itemizedlist>
+      </para>
+     </section><section>
+      <title>Apache Installation</title>
+      <para>
+       <itemizedlist>
+        <listitem><para>Install <emphasis>apache2</emphasis> package via Yast.</para></listitem>
+        <listitem><para>Install <emphasis>yast2-http-server</emphasis> package via Yast.</para></listitem>
+<!-- 
+        <listitem>
+         <para>Enable Apache server: yast2, Services Manager. Enable and start
+          the <emphasis>apache2</emphasis> entry.</para>
+        </listitem>
+-->
+        <listitem><para>Within Yast run the HTTP-Server configuration wizard.</para></listitem>
+        <listitem><para>Test, your HTTP-Server is running by opening a browser with
+         <emphasis>localhost</emphasis> URL. If you get <emphasis>access forbidden</emphasis>
+         message, check if there is an <emphasis>index.html</emphasis> File in <emphasis>
+         /srv/www/htdocs</emphasis>. If there is no such file, copy a simple valid index.html
+         file to this position and it "should" work.</para></listitem>
+       </itemizedlist>
+      </para>
+     </section><section>
+      <title>Tomcat Installation</title>
+      <para>
+       <itemizedlist>
+        <listitem><para>Install <emphasis>tomcat</emphasis> package via Yast.</para></listitem>
+        <listitem><para>Optionally install<emphasis>tomcat-webapps</emphasis> package via Yast.
+        This gives you visual feedback, that installation of tomcat was successful.</para></listitem>
+        <listitem>
+         <para>Enable Tomcat: yast2, Services Manager. Enable and start
+          the <emphasis>tomcat</emphasis> entry.</para>
+        </listitem>
+        <listitem><para>Test, Tomcat is running by opening a browser with
+         <emphasis>localhost:8080</emphasis> URL.</para>
+        </listitem>
+       </itemizedlist>
+      </para>
+     </section><section>
+      <title>Jobsworth Installation</title>
+      <important><para>Jobsworth Installation did not succeed. Still investigating.</para></important>
+     </section>
+  </section>
+
+ </chapter>

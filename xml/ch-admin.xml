@@ -67,6 +67,7 @@
    <para></para>
    <section id="widgets.filters">
     <title>Filters</title>
+<!-- 
     <figure>
      <title>Filter Widget</title>
      <mediaobject>
@@ -75,6 +76,7 @@
       </imageobject>
      </mediaobject>
     </figure>
+-->
     <para>You will find the filter widget on many screens. It allows you to
     filter displayed content and therefore only show relevant information.
     Just select one of the predefined filters and it will appear within the

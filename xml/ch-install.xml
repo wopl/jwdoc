@@ -17,10 +17,6 @@
  
  <toc>  </toc>
 
-<!-- 
- <chapter id="cha.install">
-  <title>Installation</title>
--->
 <!-- ###################################################################### -->
 <!-- # Base Install                                                       # -->
 <!-- ###################################################################### -->
@@ -34,22 +30,66 @@
         added some more screenshots and commands, that might help you
         speeding up the installation process.</para>
 
-  <note>
-   <para>
-       The following installation instructions are based on FreeBSD&reg; 9.2.
+   <note>
+    <para>
+       The following installation instructions are based on FreeBSD&reg; 9.2 (10.0).
        Other Unix-like operating systems may also work, once a LAMP server has been set up.
        Especially pathes to configuration files differ in various distributions
        from FreeBSD&reg; and have to be adapted individually.
-     </para>
-  </note>
-    <para>
-    First of all get an operating system on a dedicated machine running. Typically Jobsworth
-    only uses server functionality, therefore a graphical user interface (e.g. Gnome or KDE) is
-    not necessary. If you are new to server installation, such GUI would help you to find your
-    way around (e.g. looking on the web for HowTo's). 
     </para>
+   </note>
+
+   <tip>
+    <para>
+     Excellent information about FreeBSD installation and configuration you find in the
+     <ulink url="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/">FreeBSD Handbook</ulink>
+    </para>
+   </tip>
+   
+   <para>
+    First of all get the base operating system running on a dedicated machine.
+    FreeBSD 10.0 does not support old <emphasis>pkg_add</emphasis> commands anymore.
+    This mechanism has been replaced by <emphasis>pkgng</emphasis>.
+    You have to initialize this packet manager by invoking the following command: 
+   </para>
+    
+   <screen>pkg</screen>
+
+   <para>
+     Add the hostname (e.g. jwserver.example.com) to /etc/hosts.
+   </para>
 
   </chapter>
+  
+<!-- ###################################################################### -->
+<!-- # Graphical User Interface (KDE)                                     # -->
+<!-- ###################################################################### -->
+  <chapter id="gui">
+   <title>Graphical User Interface (KDE)</title>
+   <para></para>
+   <para>For a typical server environment like Jobsworth a graphical user
+    interface is not necessary and way to much overhead. Nevertheless
+    for testing and configuring the server it could be helpful to install a GUI.
+    Therefore some basic installation of KDE4 is described here.</para>
+   
+   <para>Install X11 and KDE4:</para>
+   <screen>pkg install xorg
+pkg install kde</screen>
+   <para>Add the following lines to /etc/rc.conf :</para>
+   <screen>hald_enable="YES"
+dbus_enable="YES"
+local_startup="${local_startup} /usr/local/kde4/etc/rc.d"
+kdm4_enable="YES"</screen> 
+   <para>Add the following line to /etc/fstab :</para>
+   <screen>proc &#x2F;proc procfs rw 0 0</screen>
+   <para>In your home-directory create (edit) the
+    <emphasis>.xinitrc</emphasis> file containing:</para>
+   <screen>exec /usr/local/kde4/bin/startkde</screen> 
+   <para>On next reboot of your machine KDE4 will be executed.</para>
+   <tip><para>Now is a good point of time to update your DHCP-server and DNS-server
+   to provide a unique IP-address and server-name.</para></tip>
+  </chapter>
+
 <!-- ###################################################################### -->
 <!-- # Database Install                                                   # -->
 <!-- ###################################################################### -->
@@ -83,11 +123,11 @@ mysql></screen>
       </para>
      </important>
      <para>Now type in the following commands to create the jobsworth database and 
-     an admin-user. Feel free to adjust database-name, user-id and password and
+     a database-user. Feel free to adjust database-name, user-id and password and
      note it for later configuration. Then quit mysql-console.</para>
-     <screen><userinput>CREATE DATABASE mydb DEFAULT CHARACTER SET utf8</userinput>
-<userinput>CREATE USER &apos;monty&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;some_pass&apos;;</userinput>
-<userinput>GRANT ALL PRIVILEGES ON *.* TO 'monty'@'localhost' WITH GRANT OPTION</userinput>
+     <screen><userinput>CREATE DATABASE jwsqldb DEFAULT CHARACTER SET utf8;</userinput>
+<userinput>CREATE USER 'jwsqluser'@'localhost' IDENTIFIED BY 'jwsqlpass';</userinput>
+<userinput>GRANT ALL PRIVILEGES ON *.* TO 'jwsqluser'@'localhost' WITH GRANT OPTION;</userinput>
 <userinput>quit</userinput></screen>
      <note>
       <para>
@@ -188,6 +228,7 @@ mysql></screen>
       </mediaobject>
      </figure> 
   </chapter>
+
 <!-- ###################################################################### -->
 <!-- # E-Mail Install                                                     # -->
 <!-- ###################################################################### -->
@@ -269,7 +310,22 @@ Make sure you change the password and you make it the same as the password in th
    of Jobsworth you only have to replace the ROOT.war file.</para></tip>
 
   </chapter>
-<!-- 
- </chapter>
---> 
+  
+<!-- ###################################################################### -->
+<!-- # Additional Tasks                                                   # -->
+<!-- ###################################################################### -->
+ 
+  <chapter id="addtasks">
+   <title>Additional Tasks</title>
+   <para></para>
+  </chapter>
+
+
+<!-- ###################################################################### -->
+<!-- # Other Operating Systems / Distributions                            # -->
+<!-- ###################################################################### -->
+ 
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+   href="ch-otheros.xml" />
+
 </part>
